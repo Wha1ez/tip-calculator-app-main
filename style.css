@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+:root{
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--Light-grayish-cyan);
+    font-family: "Space Mono", sans-serif;
+    font-weight: 700;
+}
+
+
+
+main{
+    width: 90%;
+    max-width: 1000px;
+    background-color: var(--White);
+    margin-top: 80px;
+    padding: 20px;
+    border-radius: 30px;
+    display: flex;
+    gap: 20px
+}
+
+label{
+    color: var(--Dark-grayish-cyan);
+    font-size: 14px;
+}
+
+input{
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    text-align: right;
+    background-color: transparent;
+    color: var(--Very-dark-cyan);
+    font-weight: 700;
+    font-size: 24px;
+    width: 100%;
+    -moz-appearance: textfield;
+    background-color: var(--Very-light-grayish-cyan);
+    padding: 10px 20px;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+
+input::placeholder{
+    color: var(--Grayish-cyan);
+}
+
+input:focus{
+    border: 2px solid var(--Strong-cyan);
+}
+
+.form-div{
+    flex-basis: 50%;
+    padding: 10px;
+}
+
+.input-div{
+    position: relative;
+    display: flex;
+    margin:5px 0 35px ;
+    border-radius: 5px;
+}
+
+.icon{
+    margin: auto;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.tip-percentage-btn-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 10px 0 40px;
+}
+
+.tip-percentage-button{
+    height: 45px;
+    outline: 0;
+    border: 0;
+    background-color: var(--Very-dark-cyan);
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--Very-light-grayish-cyan);
+    cursor: pointer;
+}
+
+.tip-percentage-button:hover{
+    background-color: var(--Light-grayish-cyan);
+    transition: 0.5s;
+    color: var(--Very-dark-cyan);
+}
+
+.active-btn{
+    color: var(--Very-dark-cyan);
+    background-color: var(--Strong-cyan);
+}
+
+.tip-percentage-input{
+    padding: 2px;
+}
+
+
+.text-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.error-message{
+    font-size: 14px;
+    color: red;
+    visibility: hidden;
+}
+
+.error-visible .error-message{
+    visibility: visible;
+}
+
+.error-visible .n-o-p-input{
+    border: 2px solid red;
+    
+}
+
+.result-div{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Very-dark-cyan);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.tip-wrapper, .total-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+    margin-top: 10px;
+}
+
+.texts p{
+    font-size: 14px;
+    color: var(--Light-grayish-cyan);
+}
+
+small{
+    color: var(--Grayish-cyan);
+}
+
+.result-div h1{
+    color: var(--Strong-cyan);
+    font-size: 35px;
+}
+
+.reset-button{
+    margin-top: auto;
+    height: 45px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--Very-dark-cyan);
+    background-color: hsla(189, 41%, 97%, 0.15);
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reset-button.active{
+    background-color: var(--Strong-cyan);
+}
+
+.reset-button:hover{
+    background-color: var(--Light-grayish-cyan);
+    transition: 0.5s;
+}
+
+@media (max-width:800px) {
+    .tip-percentage-btn-wrapper{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width:680px) {
+    body{
+        height: 100%;
+        padding-top: 100px;
+    }
+  
+    main{
+        flex-direction: column;
+        margin-top: 50px;
+        width: 100%;
+        border-radius: 30px 30px 0px 0px;
+    }
+}
